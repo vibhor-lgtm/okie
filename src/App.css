@@ -1,0 +1,43 @@
+/* Gradient Text Animation */
+@keyframes gradient-animation {
+    0% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: -100% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #ff7a7a, #f9a825, #0d47a1, #ff7a7a);
+    animation: gradient-animation 3s ease infinite; /* Increased speed with 8s */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+  }
+  
+  /* Adding Grayish Shadow around the text */
+  .text-shadow {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), 0px 0px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+/* this is for Navbar */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out forwards;
+}
