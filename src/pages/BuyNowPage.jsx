@@ -34,7 +34,7 @@ const BuyNowPage = ({isLoggedIn, userEmail}) => {
       
       try {
 
-        const response = await axiosInstance.post("/buy",{ name, email, phone,category, quantity },{withCredentials:true})
+        const response = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/buy`,{ name, email, phone,category, quantity },{withCredentials:true})
         
         if(response.data.purchase){
           toast.success("Sending data successfull");
