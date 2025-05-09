@@ -12,7 +12,7 @@ const Login = ({ setIsLoggedIn }) => {
 
     try {
       // Simulate the login logic (you can replace this with your real authentication logic)
-      const response = await axiosInstance.post("/login",{ email, password},{withCredentials:true})
+      const response = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/login`,{ email, password},{withCredentials:true})
       
       
       if (response.data) {
