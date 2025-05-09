@@ -32,7 +32,7 @@ const RentNowPage = ({ isLoggedIn, userEmail }) => {
     console.log(name);
     if (isLoggedIn) {
       try {
-         const response = await axiosInstance.post("/rent",{ name, email, phone, category, duration },{withCredentials:true})
+         const response = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/rent`,{ name, email, phone, category, duration },{withCredentials:true})
         
 
         if (response.data.rental) {
