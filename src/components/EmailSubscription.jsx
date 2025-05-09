@@ -26,7 +26,7 @@ const EmailSubscription = ({isLoggedIn}) => {
 
   if(isLoggedIn){
     try {
-      const response = await axiosInstance.post("/subscribe", {email})
+      const response = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/subscribe`, {email})
     } catch (error) {
       console.log(error.message)
     }
