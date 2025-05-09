@@ -13,7 +13,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("/signup", { username, email, password })
+      const response = await axiosInstance.post(`${process.env.REACT_APP_API_URL}/signup`, { username, email, password })
       if(response.data){
         toast.success("Sign Up successfully ")
         navigate("/login")
